@@ -28,7 +28,7 @@ def burp(arg):
         return ''
 
 def callback(req, res):
-    print res
+    global final_count
     if res.__len__() > 0:
         print '[+] '+res
         final_result.append(res)
@@ -57,7 +57,7 @@ def menu():
 
 if __name__ == '__main__':
     final_result = []
-    final_count = []
+    final_count = 0 
     process = 0
     all_num = 0
     flag = True
